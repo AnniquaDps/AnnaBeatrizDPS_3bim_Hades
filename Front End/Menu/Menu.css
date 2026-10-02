@@ -1,0 +1,65 @@
+html, body {
+    
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("/public/hades imagens/Tela_Menu.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    gap:0px;
+}
+
+img{
+    width: 600px;
+}
+h1 {
+    width: 10%;
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    top: 40px;
+    left: 170px;
+
+
+    z-index: 2;
+}
+
+
+.botao {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    width: 100px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 200px;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: "Hades";
+    src: url("/public/hades imagens/hades/HADES.otf") format("opentype");
+}
+
+button {
+    width: 300px;
+    height: 50px;
+    background-color: #0e201c;
+    font-family: "Hades";
+    font-size: xx-large;
+    color: #e1dbd8;
+}
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserção de Artefatos</title>
+    <link rel="stylesheet" href="Artefato.css">
+</head>
+
+<body>
+    <div class="total">
+        <h1>Inserção de Artefatos</h1>
+        <div class="area-crud">
+            <div class="lado-esquerdo">
+                <div class="informacoes">
+                    <div class="id-artefato">
+                        <label for="id_artefato">
+                            Insira o ID do artefato:
+                        </label>
+                        <input type="number" id="id_artefato" name="id_artefato">
+                    </div>
+                    <div class="linha-id">
+                        <input type="button" value="Procure" id="btProcure" onclick="procure()">
+                        <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+                        <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+                        <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+                    </div>
+                    <label for="nome_artefato">
+                        Nome do artefato:
+                    </label>
+                    <input type="text" id="nome_artefato" name="nome_artefato">
+                    <label for="efeito_artefato">
+                        Efeito do artefato:
+                    </label>
+                    <input type="text" id="efeito_artefato" name="efeito_artefato">
+                    <div class="botoes-acao">
+                        <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+                        <input type="button" value="Cancelar" id="btCancelar" onclick="cancelar()"
+                            style="display:none;">
+                    </div>
+                </div>
+                <div class="lista-artefatos">
+                    <h2>artefatos já inseridos:</h2>
+                    <div id="RespostaListar"></div>
+                </div>
+            </div>
+            <aside class="form-direita">
+                <h2>
+                    Imagem do artefato
+                </h2>
+                <p class="instrucao-imagem">
+                    (Clique na imagem para alterar)
+                </p>
+                <div class="img-container">
+                    <img id="img_artefato" onclick="acionarUpload()">
+                    <input type="file" id="inputImagem" accept="image/*" style="display:none;"
+                        onchange="previewImagem()">
+                </div>
+            </aside>
+        </div>
+    </div>
+    </div>
+    <div id="popupAviso" class="popup-aviso">
+        <button id="fecharAviso" class="fechar-aviso">
+            X
+        </button>
+        <p id="mensagemAviso"></p>
+    </div>
+    <script src="Artefato.js"></script>
+</body>
+</html>

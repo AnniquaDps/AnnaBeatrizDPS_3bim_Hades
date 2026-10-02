@@ -1,0 +1,285 @@
+/* =========================================================
+   FONTES
+   ========================================================= */
+
+@font-face {
+    font-family: "Hades";
+    src: url("../../public/hades imagens/hades/HADES.otf")
+         format("opentype");
+}
+
+@font-face {
+    font-family: "Geral";
+    src: url("../../public/hades imagens/Spectral_SC/SpectralSC-Bold.ttf")
+         format("truetype");
+}
+
+
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+   ========================================================= */
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+
+    background-image: url("../../public/hades imagens/Hades_Tela_Mestre.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================================================
+   TELA PRINCIPAL
+   ========================================================= */
+
+.total {
+    width: 85vw;
+    max-width: 1300px;
+    aspect-ratio: 16 / 9;
+
+    position: relative;
+    box-sizing: border-box;
+
+    padding: 90px 150px 70px;
+
+    overflow: hidden;
+
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.7));
+
+    font-family: "Geral";
+}
+
+.total::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../public/hades imagens/menu_geral.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.75;
+
+    z-index: 0;
+}
+
+.tela-mestre {
+    position: relative;
+    z-index: 1;
+
+    text-align: center;
+}
+
+/* =========================================================
+   CONTEÚDO DO MESTRE
+   ========================================================= */
+
+.tela-mestre {
+    text-align: center;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.tela-mestre h1 {
+    color: #f83b00;
+
+    font-size: 40px;
+    letter-spacing: 15px;
+
+    margin: 10px 0 5px;
+
+    text-shadow:
+        1px 1px 2px white,
+        0 0 5px white;
+}
+
+
+/* =========================================================
+   TEXTO "ESCOLHA UMA OPÇÃO"
+   ========================================================= */
+
+.tela-mestre > p {
+    color: #f01b03;
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   CONTAINER DOS 3 CRUDS
+   ========================================================= */
+
+.crud-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   BOTÕES DOS CRUDS
+   ========================================================= */
+
+.crud {
+    width: 30%;
+
+    background-color: #000;
+
+    border: 2px solid;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    transition: all 0.3s ease-in-out;
+
+    cursor: pointer;
+
+    opacity: 0.95;
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   EFEITO AO PASSAR O MOUSE NOS CRUDS
+   ========================================================= */
+
+.crud:hover {
+    border-color: #f01b03;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        inset 8px 0 15px rgba(0, 0, 0, 0.5),
+        4px 5px 0 #080808,
+        0 0 15px rgba(228, 212, 76, 0.3);
+}
+
+
+/* =========================================================
+   IMAGENS DOS CRUDS
+   ========================================================= */
+
+.crud img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   TÍTULO DOS CRUDS
+   ========================================================= */
+
+.crud h2 {
+    color: #eee9d2;
+
+    font-size: 22px;
+
+    margin-top: 30px;
+
+    text-shadow: 2px 2px #000;
+}
+
+
+/* =========================================================
+   TEXTO DOS CRUDS
+   ========================================================= */
+
+.crud p {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BOTÃO CAMPANHA
+   ========================================================= */
+
+#campanha {
+    appearance: none;
+    -webkit-appearance: none;
+
+    /* IMAGEM DO BOTÃO */
+    background-image: url("../../public/hades imagens/Botao_ligado_campanha.png");
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+
+    /* TAMANHO */
+    width: 400px;
+    height: 100px;
+
+    /* CENTRALIZA */
+    display: block;
+    margin: 40px auto 0;
+
+    /* TEXTO */
+    font-family: "Hades";
+    font-size: 30px;
+
+    /* BOTÃO */
+    cursor: pointer;
+
+    opacity: 1;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   EFEITO DO BOTÃO CAMPANHA
+   ========================================================= */
+
+#campanha:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   EFEITO AO CLICAR
+   ========================================================= */
+
+#campanha:active {
+    transform: scale(0.98);
+}

@@ -1,0 +1,434 @@
+/* ============================= */
+/* FONTES */
+/* ============================= */
+
+@font-face {
+    font-family: "Hades";
+    src: url("../../public/hades imagens/hades/HADES.otf")
+         format("opentype");
+}
+
+@font-face {
+    font-family: "Geral";
+    src: url("../../public/hades imagens/Spectral_SC/SpectralSC-Bold.ttf")
+         format("truetype");
+}
+
+
+/* ============================= */
+/* CONFIGURAÇÃO GERAL */
+/* ============================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Geral";
+
+    background-image: url("../../public/hades imagens/Fundo_geral_participante.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ============================= */
+/* PAINEL PRINCIPAL */
+/* ============================= */
+
+.total {
+    position: relative;
+
+    width: 85vw;
+    max-width: 1300px;
+
+    aspect-ratio: 16 / 9;
+
+    padding: 90px 150px 70px;
+
+    color: #eee9d2;
+
+    background-image: url("../../public/hades imagens/menu_geral.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* ============================= */
+/* FORMULÁRIO */
+/* ============================= */
+
+.formulario-participante {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 15px;
+}
+
+
+/* Campos */
+
+.campo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Textos */
+
+.campo label {
+    font-size: 18px;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+/* Inputs e selects */
+
+.campo input,
+.campo select {
+    height: 30px;
+
+    border: none;
+
+    background-color: #eeeeee;
+
+    font-size: 16px;
+
+    padding: 4px 8px;
+}
+
+
+/* ============================= */
+/* CAMPOS INDIVIDUAIS */
+/* ============================= */
+
+#id_participante {
+    width: 210px;
+}
+
+#nome_participante {
+    width: 300px;
+}
+
+#selectId_personagem {
+    width: 225px;
+}
+
+
+/* ============================= */
+/* LINHA NOME + PERSONAGEM */
+/* ============================= */
+
+.linha-participante {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.linha-participante .campo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* ============================= */
+/* BOTÕES DO FORMULÁRIO */
+/* ============================= */
+
+.campo button {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 115px;
+    height: 45px;
+
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background-color: transparent;
+    background-image: url("../../public/hades imagens/Botao_Desligado.webp");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #eee9d2;
+
+    font-family: "Geral";
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+
+/* Hover */
+
+.campo button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+
+/* Clique */
+
+.campo button:active {
+    transform: scale(0.97);
+}
+
+
+/* Botão ligado */
+
+.campo button.ligado {
+    background-image: url("../../public/hades imagens/Botao_Ligado.webp");
+}
+
+
+/* ============================= */
+/* LISTAGEM */
+/* ============================= */
+
+.lista-participantes {
+    margin-top: 35px;
+}
+
+
+/* Título */
+
+.lista-participantes h2 {
+    margin: 0 0 20px;
+
+    color: #eee9d2;
+
+    font-size: 25px;
+}
+
+
+/* ============================= */
+/* ÁREA DE ROLAGEM */
+/* ============================= */
+
+#RespostaListar {
+    height: 300px;
+
+    padding-right: 8px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* CADA PARTICIPANTE */
+/* ============================= */
+
+.participante {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 45px;
+
+    margin-bottom: 8px;
+    padding: 5px 10px;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    border: 1px solid #555;
+    border-radius: 5px;
+
+    flex-shrink: 0;
+}
+
+
+/* Informações */
+
+.participante-info {
+    flex: 1;
+
+    color: #eee9d2;
+
+    font-family: "Geral";
+    font-size: 17px;
+}
+
+
+/* ============================= */
+/* BOTÕES DA LISTAGEM */
+/* ============================= */
+
+.participante-botoes {
+    display: flex;
+    gap: 8px;
+}
+
+
+/* Botões */
+
+.btn-ficha,
+.btn-excluir {
+    width: 40px;
+    height: 35px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #222;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease;
+}
+
+
+/* Hover */
+
+.btn-ficha:hover,
+.btn-excluir:hover {
+    transform: scale(1.08);
+}
+
+
+/* ============================= */
+/* SELECT */
+/* ============================= */
+
+select {
+    background-color: #eee9d2;
+
+    color: #222;
+
+    border: 1px solid #555;
+    border-radius: 5px;
+
+    padding: 4px 8px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* BARRA DE ROLAGEM */
+/* ============================= */
+
+#RespostaListar::-webkit-scrollbar {
+    width: 10px;
+}
+
+#RespostaListar::-webkit-scrollbar-track {
+    background: #111;
+}
+
+#RespostaListar::-webkit-scrollbar-thumb {
+    background: white;
+
+    border: 1px solid #111;
+}
+
+#RespostaListar::-webkit-scrollbar-thumb:hover {
+    background:  white;
+}
+
+
+/* ============================= */
+/* POP-UP DE AVISO */
+/* ============================= */
+
+.popup-aviso {
+    position: fixed;
+
+    top: 30px;
+    right: 30px;
+
+    z-index: 9999;
+
+    display: none;
+
+    width: 320px;
+    min-height: 100px;
+
+    padding: 25px 45px 25px 25px;
+
+    box-sizing: border-box;
+
+    background-color: #171717;
+
+    border: 3px solid white;
+
+    color: white;
+
+    font-family: "Geral";
+
+    text-align: center;
+
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.7));
+}
+
+
+/* Mensagem */
+
+#mensagemAviso {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+/* ============================= */
+/* BOTÃO X DO POP-UP */
+/* ============================= */
+
+.fechar-aviso {
+    position: absolute;
+
+    top: 5px;
+    right: 7px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}

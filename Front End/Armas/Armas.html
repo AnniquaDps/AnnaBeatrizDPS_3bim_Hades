@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserção de Armas</title>
+    <link rel="stylesheet" href="Armas.css">
+</head>
+
+<body>
+    <div class="total">
+        <h1>Inserção de Armas</h1>
+        <div class="area-crud">
+            <div class="lado-esquerdo">
+                <div class="informacoes">
+                    <div class="id-arma">
+                        <label for="id_arma">
+                            Insira o ID da Arma Infernal:
+                        </label>
+                        <input type="number" id="id_arma" name="id_arma">
+                    </div>
+                    <div class="linha-id">
+                        <input type="button" value="Procure" id="btProcure" onclick="procure()">
+                        <input type="button" value="Inserir" id="btInserir" onclick="inserir()" style="display:none;">
+                        <input type="button" value="Alterar" id="btAlterar" onclick="alterar()" style="display:none;">
+                        <input type="button" value="Excluir" id="btExcluir" onclick="excluir()" style="display:none;">
+                    </div>
+                    <label for="nome_arma">
+                        Nome da Arma Infernal:
+                    </label>
+                    <input type="text" id="nome_arma" name="nome_arma">
+                    <label for="descricao_arma">
+                        Descrição da Arma Infernal:
+                    </label>
+                    <input type="text" id="descricao_arma" name="descricao_arma">
+                    <div class="botoes-acao">
+                        <input type="button" value="Salvar" id="btSalvar" onclick="salvar()" style="display:none;">
+                        <input type="button" value="Cancelar" id="btCancelar" onclick="cancelar()"
+                            style="display:none;">
+                    </div>
+                </div>
+                <div class="lista-armas">
+                    <h2>Armas já inseridas:</h2>
+                    <div id="RespostaListar"></div>
+                </div>
+            </div>
+            <aside class="form-direita">
+                <h2>
+                    Imagem da Arma Infernal
+                </h2>
+                <p class="instrucao-imagem">
+                    (Clique na imagem para alterar)
+                </p>
+                <div class="img-container">
+                    <img id="img_arma" onclick="acionarUpload()">
+                    <input type="file" id="inputImagem" accept="image/*" style="display:none;"
+                        onchange="previewImagem()">
+                </div>
+            </aside>
+        </div>
+    </div>
+    </div>
+    <div id="popupAviso" class="popup-aviso">
+        <button id="fecharAviso" class="fechar-aviso">
+            X
+        </button>
+        <p id="mensagemAviso"></p>
+    </div>
+    <script src="Armas.js"></script>
+</body>
+
+</html>

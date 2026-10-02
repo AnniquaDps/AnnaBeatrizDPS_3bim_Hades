@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Participante.css">
+</head>
+
+<body>
+
+    <div class="total">
+
+        <div class="formulario-participante">
+
+            <div class="campo campo-id">
+
+                <label for="id_participante">
+                    INSIRA O ID DO PARTICIPANTE:
+                </label>
+
+                <input type="number" id="id_participante" name="id_participante">
+
+                <button type="button" id="btProcure" onclick="procure()">
+                    PROCURAR
+                </button>
+
+                <button type="button" id="btInserir" onclick="inserir()">
+                    INSERIR
+                </button>
+
+                <button type="button" id="btAlterar" onclick="alterar()" style="display: none;">
+                    ALTERAR
+                </button>
+
+                <button type="button" id="btSalvar" onclick="salvar()" style="display: none;">
+                    SALVAR
+                </button>
+
+                <button type="button" id="btCancelar" onclick="cancelar()" style="display: none;">
+                    CANCELAR
+                </button>
+
+            </div>
+
+
+            <div class="linha-participante">
+
+                <div class="campo">
+
+                    <label for="nome_participante">
+                        NOME DO PARTICIPANTE:
+                    </label>
+
+                    <input type="text" id="nome_participante" name="nome_participante">
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="selectId_personagem">
+                        PERSONAGEM:
+                    </label>
+
+                    <select name="selectId_personagem" id="selectId_personagem" disabled>
+
+                        <option value="">
+                            Carregando...
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="lista-participantes">
+
+            <h2>PARTICIPANTES JÁ INSERIDOS:</h2>
+
+            <div id="RespostaListar">
+
+                <!-- Os participantes serão inseridos aqui pelo JavaScript -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="popupAviso" class="popup-aviso">
+
+        <button id="fecharAviso" class="fechar-aviso">
+            X
+        </button>
+
+        <p id="mensagemAviso"></p>
+
+    </div>
+
+
+    <script src="Participante.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+/* =========================================================
+   FONTES
+   ========================================================= */
+
+@font-face {
+    font-family: "Hades";
+    src: url("../../public/hades imagens/hades/HADES.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Geral";
+    src: url("../../public/hades imagens/Spectral_SC/SpectralSC-Bold.ttf") format("truetype");
+}
+
+
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+   ========================================================= */
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+
+    background-image: url("../../public/hades imagens/fundo_geral.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================================================
+   TELA PRINCIPAL
+   ========================================================= */
+
+.total {
+    width: 85vw;
+    max-width: 1300px;
+
+    aspect-ratio: 16 / 9;
+
+    background-image: url("../../public/hades imagens/menu_geral.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    box-sizing: border-box;
+
+    padding: 90px 150px 70px;
+
+    overflow: hidden;
+
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.7));
+
+    color: #d29b08;
+    font-family: "Geral";
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.total h1 {
+    text-align: center;
+
+    margin: 0 0 5px 0;
+
+    font-family: "Geral";
+    font-size: 40px;
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL DO CRUD
+   ========================================================= */
+
+.area-crud {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 30px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   LADO ESQUERDO — INFORMAÇÕES
+   ========================================================= */
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* ID DA ARMA */
+
+.id-arma {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.id-arma label {
+    margin: 0;
+}
+
+.id-arma input {
+    width: 200px;
+}
+
+
+/* BOTÕES DO CRUD */
+
+.linha-id {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.botoes-crud {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+input[type="button"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-image: url("../../public/hades imagens/Botao_Desligado.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+
+    width: 180px;
+    height: 55px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+input[type="button"].ligado {
+    background-image: url("../../public/hades imagens/Botao_Ligado.webp");
+}
+
+
+/* Botões menores */
+
+#btAlterar,
+#btExcluir {
+    width: 140px;
+}
+
+
+/* =========================================================
+   LADO DIREITO — IMAGEM
+   ========================================================= */
+
+.form-direita {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    text-align: center;
+
+    padding-top: 10px;
+}
+
+.form-direita h2 {
+    margin: 0 0 15px 0;
+}
+
+.instrucao-imagem {
+    margin: 0 0 15px 0;
+}
+
+.img-container img {
+    width: 280px;
+    height: 280px;
+
+    object-fit: contain;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   LISTAGEM DAS ARMAS
+   ========================================================= */
+
+.lista-armas {
+    width: 100%;
+
+    margin-top: 10px;
+}
+
+.lista-armas h2 {
+    margin: 10px 0;
+
+    text-align: center;
+}
+
+
+/* Caixa da listagem */
+
+#RespostaListar {
+    width: 100%;
+    height: 150px;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+    margin: 3px 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    border: 2px solid #d29b08;
+
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   SCROLL DA LISTAGEM
+   ========================================================= */
+
+#RespostaListar::-webkit-scrollbar {
+    width: 8px;
+}
+
+#RespostaListar::-webkit-scrollbar-track {
+    background: #171717;
+}
+
+#RespostaListar::-webkit-scrollbar-thumb {
+    background: #d29b08;
+
+    border-radius: 5px;
+}
+
+#RespostaListar::-webkit-scrollbar-thumb:hover {
+    background: #f0b91a;
+}
+
+
+/* =========================================================
+   ITEM DA LISTAGEM
+   ========================================================= */
+
+.arma-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #d29b08;
+}
+
+
+/* Imagem da arma na listagem */
+
+.imagem-arma {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* Informações da arma */
+
+.dados-arma {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    text-align: left;
+}
+
+.dados-arma p {
+    margin: 0;
+}
+
+.lista-armas {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.lista-armas h2 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* =========================
+   POP-UP DE AVISOS
+========================= */
+
+.popup-aviso {
+
+    position: fixed;
+
+    top: 30px;
+    right: 30px;
+
+    width: 320px;
+    min-height: 100px;
+
+    padding: 25px 45px 25px 25px;
+
+    box-sizing: border-box;
+
+    background-color: #171717;
+
+    border: 3px solid #d29b08;
+
+    color: #d29b08;
+
+    font-family: "Geral";
+
+    text-align: center;
+
+    z-index: 9999;
+
+    display: none;
+
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.7));
+}
+
+/* Mensagem */
+
+#mensagemAviso {
+
+    margin: 0;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+}
+
+
+/* Botão X */
+
+.fechar-aviso {
+
+    position: absolute;
+
+    top: 5px;
+    right: 7px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #d29b08;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Efeito quando passa o mouse */
+
+.fechar-aviso:hover {
+
+    color: #ffffff;
+
+    transform: scale(1.1);
+}

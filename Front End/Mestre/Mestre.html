@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Mestre</title>
+    <link rel="stylesheet" href="Mestre.css">
+</head>
+    <body>
+    <div class="total">
+        <div class="tela-mestre">
+            <h1>Você entrou como MESTRE</h1>
+            <p>ESCOLHA UMA OPÇÃO</p>
+            <div class="crud-container">
+                <button class="crud" onclick="abrirArmas()">
+                    <img src="/public/hades imagens/icon_armas.webp" alt="Armas">
+                    <h2>ARMAS</h2>
+                    <p>Gerenciar armas</p>
+                </button>
+                <button class="crud" onclick="abrirBencaos()">
+                    <img src="/public/hades imagens/icon_bencaos.webp" alt="Bênçãos">
+                    <h2>BÊNÇÃOS</h2>
+                    <p>Gerenciar bênçãos</p>
+                </button>
+                <button class="crud" onclick="abrirArtefatos()">
+                    <img src="/public/hades imagens/icon_artefatos.webp" alt="Artefatos">
+                    <h2>ARTEFATOS</h2>
+                    <p>Gerenciar artefatos</p>
+                </button>
+            </div>
+            <div>
+                <button class="campanha" id="campanha" onclick="abrirCampanha()"> INICIAR CAMPANHA </button>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function abrirArmas() {
+            window.location.href = "/Front End/Armas/Armas.html";
+        }
+        function abrirBencaos() {
+            window.location.href = "/Front End/Bencao/Bencao.html";
+        }
+        function abrirArtefatos() {
+            window.location.href = "/Front End/Artefato/Artefato.html";
+        }
+        function abrirCampanha() {
+            window.location.href = "/Front End/Participante/Participante.html";
+        }
+        const botoes = document.querySelectorAll('#campanha');
+        botoes.forEach(function (botao) {
+
+        botao.addEventListener("click", function () {
+
+        botoes.forEach(function (outroBotao) {
+            outroBotao.classList.remove("ligado");
+        });
+
+        botao.classList.add("ligado");
+
+    });
+
+});
+    </script>
+</body>
+</html>
